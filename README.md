@@ -48,17 +48,23 @@ The following docker containers will be deployed:
 
 ![Docker containers](assets/docker_containers.png "Docker Containers")
 
-### **Services/Ports**
+-------------------------------
+
+### **Application Services/Ports**
 The following services will be available:
-- **HAPI FHIR Server** - TCP 8080
-- **HAPI Postgres** - TCP 5432
-- **CQL Test Runner** - TCP 3000
-- **CQL Studio** - TCP 4200
+- **HAPI FHIR Server** - TCP 8080 (HTTP)
+- **HAPI Postgres** - TCP 5432 (JDBC)
+- **CQL Test Runner** - TCP 3000 (HTTP)
+- **CQL Studio** - TCP 4200 (HTTP)
+
+-------------------------------
 
 ### **Using (and not using) CQL Studio**
 CQL Studio is a fully functional IDE environment for authoring CQL. In addition, it has the capability to integrate with an oLlama model for authoring assistance and troubleshooting. This repo does not cover configuring the AI assistant. This GUI is not required for production deployments.
 
 ![CQL Studio](assets/cql_studio.png "Docker Containers")
+
+-------------------------------
 
 ### **Submodules**
 The following submodules were added to this repo (you do not need to run these commands again):
