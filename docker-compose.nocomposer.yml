@@ -52,28 +52,6 @@ services:
     networks:
       - cql-network
 
-  # 💻 CQL Studio (Frontend)
-  quality-cql-studio:
-    build: ./cql-studio
-    image: hlseven/quality-cql-studio:latest
-    container_name: quality-cql-studio
-    restart: unless-stopped
-    depends_on:
-      - quality-cql-tests-runner
-    ports:
-      - "4200:80"
-    environment:
-      # URLs the browser (on your host) can access
-      CQL_RUNNER_API: "http://localhost:3000"
-      CQL_STUDIO_RUNNER_BASE_URL: "http://localhost:3000"
-
-      # FHIR server accessible from the host
-      CQL_STUDIO_RUNNER_FHIR_BASE_URL: "http://hapi-fhir-jpaserver-start:8080/fhir"
-      CQL_STUDIO_FHIR_BASE_URL: "http://hapi-fhir-jpaserver-start:8080/fhir"
-      CQL_STUDIO_TERMINOLOGY_BASE_URL: "http://hapi-fhir-jpaserver-start:8080/fhir"
-    networks:
-      - cql-network
-
 # 🔒 Persistent storage for Postgres
 volumes:
   hapi-fhir-postgres-data:
