@@ -4,8 +4,7 @@ This is a modified repo of the original [HAPI FHIR Starter](https://github.com/h
 
 ## **Setup - Running as Docker**
 
-**» Step 1 – Clone repo and repo submodules
--------------------------------------------**
+### **» Step 1 – Clone repo and repo submodules**
 
 ```sh
 git clone https://github.com/Zachary-Higgins-Altera/hapi-fhir-cql-starter.git
@@ -13,8 +12,7 @@ git submodule update --init --recursive
 ```
 
 
-**» Step 2 – Docker Compose
--------------------------------------------------------------**
+### **» Step 2 – Docker Compose**
 
 Run the following command from the cloned repo: 
 ``` sh
@@ -24,10 +22,9 @@ docker compose up -d --build
 docker compose -f docker-compose.nocomposer.yml up -d --build
 ```
 
-**» Step 3 – Load content to HAPI FHIR Server
----------------------------------------**
+### **» Step 3 – Load content to HAPI FHIR Server**
 
-Run the following powershell scripts:
+Start the containers and run the following powershell scripts:
 
 ``` sh
 # Note: You may need to add a host file entry for the HAPI FHIR server: 
