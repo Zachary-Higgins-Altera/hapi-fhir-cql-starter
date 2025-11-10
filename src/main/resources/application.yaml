@@ -263,7 +263,7 @@ hapi:
     # allow_cascading_deletes: true
     # allow_contains_searches: true
     # allow_external_references: true
-    # allow_multiple_delete: true
+    allow_multiple_delete: true
     # allow_override_default_search_params: true
     # auto_create_placeholder_reference_targets: false
     # mass_ingestion_mode_enabled: false
@@ -273,15 +273,15 @@ hapi:
     # enforce_referential_integrity_on_delete: false
     # enforce_referential_integrity_on_write: false
     # etag_support_enabled: true
-    # expunge_enabled: true
+    expunge_enabled: true
     # fhirpath_interceptor_enabled: false
     # filter_search_enabled: true
     # graphql_enabled: true
 
     # Thread pool configuration for maintenance operations
     # Defaults to Runtime.getRuntime().availableProcessors() if not specified
-    # reindex_thread_count: 4        # Number of threads to use for reindex operations
-    # expunge_thread_count: 4        # Number of threads to use for expunge operations
+    reindex_thread_count: 4        # Number of threads to use for reindex operations
+    expunge_thread_count: 4        # Number of threads to use for expunge operations
     # mark_resources_for_reindexing_upon_search_parameter_change: false
 
     # -------------------------------------------------------------------------------
