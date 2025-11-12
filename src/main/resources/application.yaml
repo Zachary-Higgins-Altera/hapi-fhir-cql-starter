@@ -153,17 +153,16 @@ hapi:
     # use_apache_address_strategy: false
     # use_apache_address_strategy_https: false
     # custom_content_path: ./custom               # folder name must be 'custom'
-    # app_content_path: ./configs/app            # served under /web/app
+    # app_content_path: ./configs/app             # served under /web/app
     # server_address: http://hapi.fhir.org/baseR4
     # defer_indexing_for_codesystems_of_size: 101
 
     # -------------------------------------------------------------------------------
     # B. Implementation Guides (IG) & Package Install
     # -------------------------------------------------------------------------------
-    ig_runtime_upload_enabled: false
-    # validate_resource_status_for_package_upload: false   # default true
+    ig_runtime_upload_enabled: true
+    validate_resource_status_for_package_upload: false   # default true
     # install_transitive_ig_dependencies: true
-    # implementationguides:
     #   swiss:
     #     name: swiss.mednet.fhir
     #     version: 0.8.0
@@ -224,7 +223,7 @@ hapi:
           # enable_validation: false
           # enable_expression_caching: true
       terminology:
-        valueset_preexpansion_mode: REQUIRE            # USE_IF_PRESENT | REQUIRE | IGNORE
+        valueset_preexpansion_mode: REQUIRE                # USE_IF_PRESENT | REQUIRE | IGNORE
         valueset_expansion_mode: PERFORM_NAIVE_EXPANSION   # AUTO | USE_EXPANSION_OPERATION | PERFORM_NAIVE_EXPANSION
         valueset_membership_mode: USE_EXPANSION            # AUTO | USE_VALIDATE_CODE_OPERATION | USE_EXPANSION
         code_lookup_mode: USE_VALIDATE_CODE_OPERATION      # AUTO | USE_VALIDATE_CODE_OPERATION | USE_CODESYSTEM_URL

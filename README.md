@@ -9,6 +9,8 @@ This is a modified repo of the original [HAPI FHIR Starter](https://github.com/h
 ```sh
 git clone https://github.com/Zachary-Higgins-Altera/hapi-fhir-cql-starter.git
 git submodule update --init --recursive
+# (Optional) Retrieve Maven Packages
+mvn clean install -DskipTests
 ```
 
 
@@ -20,18 +22,6 @@ docker compose up -d --build
 
 # To skip deploying CQL Studio, use the following...
 docker compose -f docker-compose.nocomposer.yml up -d --build
-```
-
-### **» Step 3 – Load content to HAPI FHIR Server**
-
-Start the containers and run the following powershell scripts:
-
-``` sh
-# Note: You may need to add a host file entry for the HAPI FHIR server: 
-# 127.0.0.1 hapi-fhir-jpaserver-start
-
-.\load_libraries.ps1
-.\load_valuesets.ps1
 ```
 
 ## **Reference**
@@ -67,7 +57,6 @@ CQL Studio is a fully functional IDE environment for authoring CQL. In addition,
 The following submodules were added to this repo (you do not need to run these commands again):
 
 ``` bash
-git submodule add https://github.com/cqframework/ecqm-content-cms-2025.git
 git submodule add https://github.com/cqframework/cql-tests-runner.git
 git submodule add https://github.com/cqframework/cql-studio.git
 git submodule update --init --recursive

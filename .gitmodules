@@ -4,6 +4,3 @@
 [submodule "cql-studio"]
 	path = cql-studio
 	url = https://github.com/cqframework/cql-studio.git
-[submodule "cqf-ruler"]
-	path = cqf-ruler
-	url = https://github.com/cqframework/cqf-ruler.git
